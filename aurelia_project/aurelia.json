@@ -131,16 +131,8 @@
             "path": "../node_modules/aurelia-testing/dist/amd",
             "main": "aurelia-testing",
             "env": "dev"
-          },
-          {
-            "name": "vs",
-            "path": "../node_modules/monaco-editor/dev",
-            "main": "vs/editor/editor.main",
-            "resources": [
-              "vs/**/*.js", "vs/**/*.css", "vs/base/**/*.js","vs/base/common/**/*.js",
-              "vs/editor/editor.main.css", "*.json!", "*.json!"
-            ]
           }
+      
         ]
       }
     ]

@@ -4,6 +4,7 @@ export class App {
 
   public attached() : void
   {
+ requirejs.config({ paths: { 'vs': '../node_modules/monaco-editor/dev/vs' }});
  requirejs(['vs/editor/editor.main'], function() {
             
             var element = document.getElementById('container');            

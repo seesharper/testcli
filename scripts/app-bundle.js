@@ -5,6 +5,7 @@ define('app',["require", "exports"], function (require, exports) {
             this.message = 'Hello World!';
         }
         App.prototype.attached = function () {
+            requirejs.config({ paths: { 'vs': '../node_modules/monaco-editor/dev/vs' } });
             requirejs(['vs/editor/editor.main'], function () {
                 var element = document.getElementById('container');
                 var editor = monaco.editor.create(document.getElementById('container'), {
@@ -60,5 +61,5 @@ define('resources/index',["require", "exports"], function (require, exports) {
     exports.configure = configure;
 });
 
-define('text!app.html', ['module'], function(module) { module.exports = "<template>\n  <h1>${message}</h1>\n</template>\n"; });
+define('text!app.html', ['module'], function(module) { module.exports = "<template>\n  <div id=\"container\" style=\"width:800px;height:600px;border:1px solid grey\"></div>\n  <h1>${message}</h1>\n</template>\n"; });
 //# sourceMappingURL=app-bundle.js.map
